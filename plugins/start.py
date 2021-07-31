@@ -1,4 +1,4 @@
-#(©)Codexbotz
+#(©)Null
 
 import asyncio
 from pyrogram import Client, filters, __version__
@@ -73,8 +73,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("😊 About Me", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton("Channel", callback_data = "about"),
+                    InlineKeyboardButton("Close", callback_data = "close")
                 ]
             ]
         )
@@ -94,11 +94,11 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
+    text = "<b>Tekan Join Channel Dahulu Untuk Teruskan\n\nLepas Join Tekan</b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
-        text = text + f" <b>and <a href='https://t.me/{client.username}?start={argument}'>try again</a></b>"
+        text = text + f" <b> 👉🏻  <a href='https://t.me/{client.username}?start={argument}'>CUBA LAGI</a></b>"
     except ValueError:
         pass
     reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton("Join Channel", url = client.invitelink)]])
