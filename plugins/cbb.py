@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ CHANNEL : <a href='https://t.me/movetostop'>Click here</a></b>",
+            text = f"<b>○ CHANNEL : <a href='https://t.me/Botak_Repository'>Click here</a></b>",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
