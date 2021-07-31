@@ -94,7 +94,7 @@ async def start_command(client: Client, message: Message):
 
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
-    text = "<b>Tekan Join Channel Dahulu Untuk Teruskan\n\nLepas Join Tekan</b>"
+    text = "<b>Tekan Join Channel Dahulu Untuk Teruskan\n\nLepas Join Tekan cuba lagi\n\nDan Tekan START </b>"
     message_text = message.text
     try:
         command, argument = message_text.split()
